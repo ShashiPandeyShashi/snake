@@ -12,7 +12,7 @@ template <ui::Window window_t, typename Random>
 void run(states::state state, window_t& win, event_handler const& handler,
          ui_renderer const& renderer, Random&& rand) {
   auto prev_time = std::chrono::steady_clock::now();
-  std::chrono::milliseconds const tick_threshold{8};  // 60 ticks per second
+  std::chrono::milliseconds const tick_threshold{8};  // 120 ticks per second
   std::chrono::nanoseconds accumulated_time{0};
   while (state != states::state{states::quit{}}) {
     auto current_time = std::chrono::steady_clock::now();
